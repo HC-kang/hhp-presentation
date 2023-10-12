@@ -6,8 +6,8 @@
   "scripts": {
     "start:before": "ts-node src/explosive-before.ts",
     "start:after": "ts-node src/explosive-after.ts",
-    "test:before": "jest --maxWorker=1 --forceExit -- test/explosive.test.ts",
-    "test:after": "jest --maxWorker=1 --forceExit -- test/explosive-testable.test.ts",
+    "test:before": "jest --maxWorker=1 --forceExit -- test/explosive-before.test.ts",
+    "test:after": "jest --maxWorker=1 --forceExit -- test/explosive-after.test.ts",
     "test:watch": "jest --maxWorker=1 --forceExit --watchAll",
     "test:coverage": "jest --maxWorker=1 --forceExit --watchAll --coverage"
   },

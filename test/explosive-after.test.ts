@@ -1,4 +1,4 @@
-import { IExplodable, Primer, Wire, Igniter, Bomber } from '../src/explosive-testable';
+import { IExplodable, Primer, Wire, Igniter, Bomber } from '../src/explosive-after';
 
 describe('Explosion Test: After', () => {
   let tnt: IExplodable;
