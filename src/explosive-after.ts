@@ -23,7 +23,7 @@ export class Primer {
     return true;
   }
 
-  // 뇌관을 폭발시킨다 - 액션
+  // 뇌관을 폭발시킨다 - 액션(계산)
   detonate() {
     console.log('\x1b[31m%s\x1b[0m', 'Primer - Detonate');
     if (this.tnt) {
@@ -37,7 +37,7 @@ export class Primer {
 export class Wire {
   constructor(private primer: Primer) {}
 
-  // 전선을 폭발시킨다 - 액션
+  // 전선을 폭발시킨다 - 액션(계산)
   ignite() {
     console.log('\x1b[31m%s\x1b[0m', 'Wire - Ignite');
     return this.primer.detonate();
@@ -56,7 +56,7 @@ export class Igniter {
     return true;
   }
 
-  // 점화기를 폭발시킨다 - 액션
+  // 점화기를 폭발시킨다 - 액션(계산)
   ignite() {
     let targetTerminated = false;
     if (this._charged) {
@@ -83,14 +83,14 @@ export class Bomber {
     return true;
   }
 
-  // 점화기를 작동시킨다 - 액션
+  // 점화기를 작동시킨다 - 액션(계산)
   ignite() {
     console.log('Bomber: Igniting');
     return this.igniter.ignite();
   }
 }
 
-// 전역변수
+// 전역변수 - 데이터
 let numOfTnt = 3;
 const tnts: IExplodable[] = [];
 for (let i = 0; i < numOfTnt; i++) {
