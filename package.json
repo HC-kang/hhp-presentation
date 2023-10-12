@@ -1,0 +1,26 @@
+{
+  "name": "marsrover",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:before": "ts-node src/explosive.ts",
+    "start:after": "ts-node src/explosive-testable.ts",
+    "test:before": "jest --maxWorker=1 --forceExit -- test/explosive.test.ts",
+    "test:after": "jest --maxWorker=1 --forceExit -- test/explosive-testable.test.ts",
+    "test:watch": "jest --maxWorker=1 --forceExit --watchAll",
+    "test:coverage": "jest --maxWorker=1 --forceExit --watchAll --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1"
+  }
+}
