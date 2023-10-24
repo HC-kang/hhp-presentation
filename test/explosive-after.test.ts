@@ -41,7 +41,7 @@ describe('Explosion Test: After', () => {
     expect(result).toEqual(true);
   });
 
-  it('점화기는 충전이 가능해야 한다.', () => {
+  it('igniter는 충전이 가능해야 한다.', () => {
     const result = igniter.charge();
 
     expect(result).toEqual(true);
@@ -68,13 +68,13 @@ describe('Explosion Test: After', () => {
     expect(result.statusOfIgniter).toBeFalsy();
   });
 
-  it('폭파병이 점화기를 충전할 수 있어야 한다.', () => {
+  it('bomber가 igniter를 충전할 수 있어야 한다.', () => {
     const result = bomber.charge();
 
     expect(result).toEqual(true);
   });
 
-  it('TNT를 장전하지 않고 폭파병에게 점화를 지시하면 target이 폭파되지 않아야 한다.', () => {
+  it('TNT를 장전하지 않고 bomber에게 점화를 지시하면 target이 폭파되지 않아야 한다.', () => {
     bomber.charge();
     const result = bomber.ignite();
 
@@ -82,7 +82,7 @@ describe('Explosion Test: After', () => {
     expect(result.statusOfIgniter).toBeFalsy();
   });
 
-  it('TNT를 장전하고 폭파병에게 점화를 지시하면 target이 폭파되어야 한다.', () => {
+  it('TNT를 장전하고 bomber에게 점화를 지시하면 target이 폭파되어야 한다.', () => {
     primer.arm(tnt);
     bomber.charge();
     const result = bomber.ignite();
